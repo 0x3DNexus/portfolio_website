@@ -1,0 +1,87 @@
+.contactContainer{
+    margin-top: 7%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: default;
+}
+
+.contactMeHeading{
+    margin-bottom: 2%;
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #f36b39;
+}
+
+.submitForm{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.name, .email, .message{
+    margin: 10px 0 10px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactAreaInput, .contactAreaText{
+    border-radius: 8px;
+    background-color: #4b4742;
+    color: white;
+    padding: 7px;
+    border: none;
+    outline: none;
+}
+
+.contactAreaInput{
+    height: 40px;
+    width: 100%;
+}
+
+.contactAreaText{
+    height: 100px;
+    width: 100%;
+    resize: none;
+}
+
+.subButton{
+    width: 30%;
+    height: 35px;
+    color: white;
+    background-color: #f36b39;
+    transition: 0.3s ease;
+    outline: none;
+    border: none;
+}
+
+.socials{
+    margin-top: 50px;
+}
+
+.socialHeading{
+    padding: 10px;
+    border: 1px solid white;
+    margin: 0 auto;
+}
+
+.githubLogo, .instaLogo, .linkedInLogo{
+    margin: 10px 30px 0 30px;
+    font-size: 2rem;
+}
+
+.subButton:hover{
+    background-color: black;
+    cursor: pointer;
+    
+}
+
+.githubLogo, .instaLogo, .linkedInLogo:hover{
+    cursor: pointer;
+}
