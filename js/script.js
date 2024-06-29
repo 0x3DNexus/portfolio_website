@@ -32,13 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //call the function even when the active tab is changed
             changeColors(currentTheme, currentTab);
 
-            //add scroll bar only to overview and projects page
-            if (targetContent !== 'home' && targetContent !== 'contact') {
-                body.style.overflowY = 'visible';
-            }
-            else {
-                body.style.overflowY = 'hidden';
-            }
+            //add scroll bar only if the current page is not home
+            if (targetContent !== 'home') {body.style.overflowY = 'visible';}
 
             contents.forEach(this_content => {
                 if (targetContent === this_content.id) {
