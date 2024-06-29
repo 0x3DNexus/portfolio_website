@@ -2,7 +2,6 @@
     margin-top: 10%;
     width: 100%;
     height: auto;
-    border: 2px solid #181a1b;
     gap: 100px;
     padding: 25px;
     display: flex;
@@ -13,7 +12,7 @@
 
 .h1Project{
     text-decoration: underline;
-    text-decoration-color: #f36b39;
+    text-decoration-color: var(--dark-secondary-color);
     text-decoration-thickness: 5px;
 }
 
@@ -40,7 +39,6 @@
 
 .project1:hover, .project2:hover{
     transform: scale(1.1);
-    cursor: pointer;
 }
 
 .projectIcon{
@@ -72,14 +70,19 @@
 .visit{
     width: auto;
     height: 50px;
-    background-color: #181a1b;
+    background-color: var(--dark-primary-color);
     border: none;
     outline: none;
+    color: white;
     border-radius: 8px;
     padding: 15px;
 }
 
 .visit:hover{
     opacity: 50%;
+    cursor: pointer;
+}
+
+.fa-arrow-up-right-from-square:hover{
     cursor: pointer;
 }

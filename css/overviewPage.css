@@ -15,8 +15,8 @@
 }
 
 h2{
-    border-bottom: 1px solid #f36b39;
-    border-right: 1px solid #f36b39;
+    border-bottom: 2px solid var(--dark-secondary-color);
+    border-right: 2px solid var(--dark-secondary-color);
     width: fit-content;
     padding: 0 10px 5px 0;
 }
@@ -63,7 +63,7 @@ strong{
     width: 150px;
     height: 45px;
     font-size: small;
-    background-color: #f36b39;
+    background-color: var(--dark-secondary-color);
     outline: none;
     border: none;
     transition: 0.3s ease;
@@ -76,7 +76,7 @@ strong{
 }
 
 .resumeBtn:not(:hover){
-    background-color: #f36b39;
+    background-color: var(--dark-secondary-color);
     color: white;
 }
 
@@ -92,7 +92,7 @@ strong{
 }
 
 .progress{
-    background-color: #f36b39;
+    background-color: var(--dark-secondary-color);
     height: 3px;
 }
 
@@ -115,7 +115,7 @@ strong{
     height: fit-content;
     margin-bottom: 7px;
     padding: 5px;
-    border: 1px solid #f36b39;
+    border: 1px solid var(--dark-secondary-color);
 }
 
 .circularContainer{
@@ -137,7 +137,6 @@ strong{
 .circularProgressBar{
     width: 120px;
     height: 120px;
-    border: 2px solid black;
     border-radius: 50%;
     margin: 20px;
     background: conic-gradient(#f36b39 3.6deg, #a0a0a0 0deg);
@@ -146,12 +145,10 @@ strong{
     align-items: center;
 }
 
-.circularProgressBar::after{
-    content: "";
-    position: absolute;
-    width: 95px;
+.innerCircularProgressBar{
     height: 95px;
-    background-color: #181a1b;
+    width: 95px;
+    background-color: var(--dark-primary-color);
     border-radius: 50%;
 }
 
@@ -189,7 +186,7 @@ strong{
     height: 170px;
     margin-right: 25px;
     padding: 5px;
-    background-color: #f36b39;
+    background-color: var(--dark-secondary-color);
     color: white;
 }
 

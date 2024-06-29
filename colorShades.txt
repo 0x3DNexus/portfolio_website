@@ -1,2 +1,10 @@
+dark mode colors [default]
 #181a1b
-#0d0f10
+#f36b39
+linear-gradient(to bottom, #2c2e31 50%, #181a1b 50%)
+
+
+light mode colors [toggle]
+#f0f0f0
+#f36b39
+linear-gradient(to bottom, #e0e0e0 50%, #7a7a7a 50%)
