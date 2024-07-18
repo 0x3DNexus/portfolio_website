@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             changeColors(currentTheme, currentTab);
 
             //add scroll bar only if the current page is not home
-            if (targetContent !== 'home') {body.style.overflowY = 'visible';}
+            if (targetContent !== 'home') {body.style.overflowY = 'visible';} else {body.style.overflowY = 'hidden';}
 
             contents.forEach(this_content => {
                 if (targetContent === this_content.id) {
@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
-
     function setActiveTabColor(currentActiveTab, currentTheme) {
         navTabs.forEach(this_tab => this_tab.style.color = '#a0a0a0'); //reset all the tabs color
 
@@ -73,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         else currentActiveTab.style.color = 'white';
     }
 
-    //marked for optimization
     function changeColors(currentTheme, currentTab) {
         setActiveTabColor(currentActiveTab, currentTheme);
 
@@ -85,12 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentTheme === 'light') {
             background = rootStyles.getPropertyValue('--light-primary-color').trim();
             textColor = rootStyles.getPropertyValue('--dark-primary-color').trim();
-        }
-
-        // Special handling for the home tab
-        if (currentTab === 'home') {
-            background = rootStyles.getPropertyValue('--dark-linear-gradient').trim();
-            if (currentTheme === 'light') background = rootStyles.getPropertyValue('--light-linear-gradient').trim();
+            document.querySelector('.pic').style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.5)';
         }
         
         //check for the inner circles on the progress bars
@@ -124,13 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function applyAndRemoveTransition(background){
-        body.style.transition = 'background 0.3s ease';
-
-        setTimeout(() =>{
-            body.style.transition = 'none';
-        },300)
-    }
+    //apply transition for the theme color change
+    function applyTransition(){ body.style.transition = 'background 0.3s ease'; }
 
     //set the percentages at correct position
     let skills = document.querySelectorAll('.skillLevel');
@@ -198,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
             //view line no. 6 for declaration of variable;
             currentTheme = 'light';
             changeColors(currentTheme, currentTab);
-            applyAndRemoveTransition(background, textColor);
+            applyTransition();
 
             sun.style.display = 'inline';
             sun.style.color = '#a0a0a0';
@@ -207,10 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
         else {
             currentTheme = 'dark';
             changeColors(currentTheme, currentTab);
-            applyAndRemoveTransition(background, textColor);
+            applyTransition();
 
             sun.style.display = 'none';
             moon.style.display = 'inline';
+            moon.style.color = '#a0a0a0';
         }
     })
 

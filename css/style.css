@@ -10,11 +10,9 @@
 :root{
     --dark-primary-color: #181a1b;
     --dark-secondary-color: #f36b39;
-    --dark-linear-gradient : linear-gradient(to bottom, #2c2e31 50%, #181a1b 50%);
     
     --light-primary-color: #f0f0f0;
     --light-secondary-color: #f36b39;
-    --light-linear-gradient : linear-gradient(to bottom, #e0e0e0 50%, #7a7a7a 50%);
 }
 
 body{
@@ -25,7 +23,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background: var(--dark-linear-gradient);
+    background: var(--dark-primary-color);
     overflow-x: hidden;
     color: white;
 }
@@ -90,9 +88,9 @@ body{
 .pic{
     width: 200px;
     height: 200px;
-    border: 2px solid white;
-    box-shadow: 0px 0px 5px -1px white;
-    margin: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px black;
+    margin: 0 40px 40px 40px;
     background-image: url('./../luffy.jpg');
     filter: brightness(130%);
     background-size: cover;
