@@ -17,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentActiveTab = navTabs[0];
     setActiveTabColor(currentActiveTab, currentTheme);
 
+    //function to prevent from loading the page scrolled (happens sometimes)
+    function scrollToTop() {
+        window.scrollTo(0, 0);
+    }
+
+    scrollToTop();
+
     navTabs.forEach(tab => {
 
         tab.addEventListener('click', () => {
@@ -33,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             changeColors(currentTheme, currentTab);
 
             //add scroll bar only if the current page is not home
-            if (targetContent !== 'home') {body.style.overflowY = 'visible';} else {body.style.overflowY = 'hidden';}
+            if (targetContent !== 'home') {body.style.overflowY = 'visible';} else {scrollToTop(); body.style.overflowY = 'hidden';}
 
             contents.forEach(this_content => {
                 if (targetContent === this_content.id) {
@@ -72,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         else currentActiveTab.style.color = 'white';
     }
 
-    function changeColors(currentTheme, currentTab) {
+    function changeColors(currentTheme, currentTab){
         setActiveTabColor(currentActiveTab, currentTheme);
 
         // Default colors for dark theme
@@ -118,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //apply transition for the theme color change
-    function applyTransition(){ body.style.transition = 'background 0.3s ease'; }
+    function applyTransition(){ body.style.transition = 'background 0.3s ease';}
 
     //set the percentages at correct position
     let skills = document.querySelectorAll('.skillLevel');
